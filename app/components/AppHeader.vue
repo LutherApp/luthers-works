@@ -13,8 +13,8 @@ const { header } = useAppConfig()
         <UColorModeImage v-bind="{ class: 'h-6 w-auto', ...header?.logo }" />
       </template>
       <template v-else>
-        Nuxt UI Pro <UBadge
-          label="Docs"
+        Luther's Works <UBadge
+          label="App"
           variant="subtle"
           class="mb-0.5"
         />
@@ -47,7 +47,11 @@ const { header } = useAppConfig()
     </template>
 
     <template #panel>
-      <UNavigationTree :links="mapContentNavigation(navigation)" />
+      <UNavigationTree
+        :links="mapContentNavigation(navigation)"
+        :multiple="false"
+        default-open
+      />
     </template>
   </UHeader>
 </template>
