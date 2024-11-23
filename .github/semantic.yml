@@ -1,0 +1,46 @@
+titleAndCommits: true
+anyCommit: true
+allowMergeCommits: true
+types:
+  - feat
+  - fix
+  - docs
+  - style
+  - refactor
+  - test
+  - chore
+  - perf
+  - ci
+  - build
+  - revert
+
+# feat (new feature for the user, not a new feature for build script) A commit of feat means you’ve added or removed src code, but since you started with 1000% coverage, something is either not covered by tests or tests broke.
+# fix (bug fix for the user, not a fix to a build script) A commit of fix means that if you were to add a new test reproducing a bug, it would not pass. In this case, the commit will make that test pass.
+# docs (changes to the documentation) A commit of docs usually means a change in markdown files. I also add as docs changes, comments in src code when only comments are changed.
+# style (formatting, missing semi colons, etc; no production code change) A commit of style, like refactor means changed src code, but instead of actual code changes, only formatting and whitespace are changed. In other words, anything a code formatter or linter changes.
+# refactor (refactoring production code, eg. renaming a variable) A commit of refactor means that you changed src code but unlike feat no tests broke and no lines lost coverage.
+# test (adding missing tests, refactoring tests; no production code change) A commit of test means changes in test files. If you weren’t at 100% code coverage, now you would be. If you had failing tests, they would be passing.
+# chore (updating grunt tasks etc; no production code change) A commit of chore is most likely something that doesn’t fit the other possible types. It shouldn’t change any src, test, build, or docs related files.
+# perf (performance improvements) A commit of perf, like refactor means changed src code, but in this case performance metrics go up.
+# ci - A commit of ci means changes related to Continuous Integration (usually yml and other configuration files).
+# build (changes that affect the build system or external dependencies) A commit of build means changes related to the build of the project and dependencies. (Basically, anything that can change the build step of the application.)
+# revert – A commit of revert simply reverts changes made in another commit.
+
+# Remarks
+# Both perf and style are (or can be) just refactors, so you can use those if possible and refactor for other cases. But, perf can also be a feat depending on the changes. perf in this case is better, but as you go you’ll find others.
+# build and ci might overlap, so you have to choose one (usually pick the one you’re solving), but if all fails, sometimes a chore is a “catch-all” for when you don’t know what to use.
+
+# Full Conventional example
+# fix: fix foo to enable bar
+
+# This fixes the broken behavior of the component by doing xyz. 
+
+# BREAKING CHANGE
+# Before this fix foo wasn't enabled at all, behavior changes from <old> to <new>
+
+# Closes D2IQ-12345
+
+# SOURCE
+# https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716
+# https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/
+# https://medium.com/opensight-ch/git-semantic-versioning-and-conventional-commits-564aece418a0
