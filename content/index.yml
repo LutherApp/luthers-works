@@ -1,9 +1,9 @@
-title: 'Luthers Works'
-description: Contains St.Louis Edition of Luthers Works.
+title: Luther's Works
+description: Contains revised Walch Edition of Luther's Works.
 navigation: false
 hero:
-  title: 'All Luthers Writings'
-  description: 'All of Luthers Writings (except the bible), in 25 volumes - The best responsive website, for searching after Luther words and phrases.'
+  title: All Luther's Writings
+  description: All of Luther's Writings (except the bible) - 22 446 pages divided into 25 volumes. - The best responsive webapp for searching for Luther words and phrases.
   orientation: horizontal
   headline:
     label: An App from LutherApp
@@ -13,7 +13,7 @@ hero:
     - label: Content
       icon: i-heroicons-arrow-right-20-solid
       trailing: true
-      to: '/st.lb'
+      to: /st.lb
       size: lg
     - label: Sources
       icon: i-simple-icons-github
@@ -26,23 +26,23 @@ hero:
     Pray that the Holy Spirit will be with us!
     ```
 features:
-  title: 'Other Lutheran Projects'
+  title: Other Lutheran Projects
   links:
-    - label: 'Luthers Works in MD format'
-      icon: 'i-simple-icons-nuxtdotjs'
-      trailingIcon: 'i-heroicons-arrow-right-20-solid'
-      color: 'gray'
-      to: 'https://github.com/LutherApp/luthers-works/content'
-      target: '_blank'
+    - label: Luther's Works in MD format
+      icon: i-simple-icons-nuxtdotjs
+      trailingIcon: i-heroicons-arrow-right-20-solid
+      color: gray
+      to: https://github.com/LutherApp/luthers-works/content
+      target: _blank
       size: lg
   items:
-    - title: 'Luther Books'
-      description: 'The best overview of Luther Resources on net.'
-      icon: 'i-heroicons-book-open'
-      to: 'https://luther-books.vercel.app'
-      target: '_blank'
-    - title: 'Christian Dogmatics'
-      description: 'The best online version with responsive design.'
-      icon: 'i-simple-icons-markdown'
-      to: 'https://christian-dogmatics.vercel.app'
-      target: '_blank'
+    - title: Luther Books
+      description: The best overview of Luther Resources on net.
+      icon: i-heroicons-book-open
+      to: https://luther-books.vercel.app
+      target: _blank
+    - title: Christian Dogmatics
+      description: The best online version with responsive design.
+      icon: i-simple-icons-markdown
+      to: https://christian-dogmatics.vercel.app
+      target: _blank
