@@ -10,7 +10,7 @@ export default defineAppConfig({
     }
   },
   seo: {
-    siteName: 'Nuxt UI Pro - Docs template'
+    siteName: 'Luthers Works'
   },
   header: {
     logo: {
@@ -28,7 +28,7 @@ export default defineAppConfig({
     }]
   },
   footer: {
-    credits: 'Copyright © 2023',
+    credits: 'Made by Kyrie Eleison',
     colorMode: false,
     links: [{
       'icon': 'i-simple-icons-nuxtdotjs',

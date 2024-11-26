@@ -1,0 +1,56 @@
+name: "\U0001F4A1 Proposal"
+description: Want to extend an existing project or contribute an entirely new one? Send us a proposal
+title: "\U0001F4A1 - "
+labels: [proposal]
+assignees:
+  - LutherApp
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for using this repo and opened a proposal!
+  - type: textarea
+    id: the-challenge
+    attributes:
+      label: The challenge
+      description: Start with the describing the challenge you have discovered and maybe have and ide about how to solve.
+      placeholder: ex. The challenge is ... 
+    validations:
+      required: false
+  - type: textarea
+    id: the-proposed-solution
+    attributes:
+      label: The proposed solution
+      description: Detail the solution you're proposing to the challenge above.
+      placeholder: |
+        1...
+        2...
+        3...
+        4...
+    validations:
+      required: true
+  - type: textarea
+    id: breaking-changes
+    attributes:
+      label: Breaking changes
+      description: Are there any breaking changes with this proposal? If so, please detail them here.
+      placeholder: ex. Because this is ... this can be a breaking changes.
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: The [GitHub Community Guidelines](https://docs.github.com/articles/github-community-guidelines) also applies here.
+      options:
+        - label: I agree to follow this project's [Code of Conduct](https://github.com/LutherApp/luthers-works/CODE_OF_CONDUCT.md). 
+
+# SOURCE
+#
+# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms
+# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository
+# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema#keys
+# https://gist.github.com/Elliria/ee13ed5201aaaac6f77f55290f189f0a
+# https://gist.githubusercontent.com/Elliria/ee13ed5201aaaac6f77f55290f189f0a/raw/b04882937ac7b5404e6ed378b135454b4e3b680f/GitHubIssueTemplateCheatSheet.yaml
+# https://learntheweb.courses/topics/markdown-yaml-cheat-sheet/
+# https://github.com/orgs/community/discussions/45084

@@ -1,0 +1,56 @@
+name: "🚀 Feature request"
+description: File a Feature request about something you want us to do for you.
+title: "🚀 - "
+labels: [feature-request]
+assignees:
+  - LutherApp
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for using this repo and adding a feature request!
+  - type: textarea
+    id: what-can-we-do
+    attributes:
+      label: Please, tell us what we can do for you
+      description: A clear and concise description of what you want us to do for you. 
+      placeholder: Ex. I'm always frustrated when [...]
+    validations:
+      required: true
+  - type: textarea
+    id: describe-the-solution
+    attributes:
+      label: Describe the solution you'd like
+      description: A clear and concise description of what you want to be the result of our new feature.
+      placeholder: |
+        1...
+        2...
+        3...
+        4...
+    validations:
+      required: false
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Describe alternatives you've considered
+      description: A clear and concise description of any alternative solutions or features you've considered.
+      placeholder: ex. Alternatives I have considered is ...
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: The [GitHub Community Guidelines](https://docs.github.com/articles/github-community-guidelines) also applies here.
+      options:
+        - label: I agree to follow this project's [Code of Conduct](https://github.com/LutherApp/luthers-works/CODE_OF_CONDUCT.md). 
+
+# SOURCE
+#
+# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms
+# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository
+# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema#keys
+# https://gist.github.com/Elliria/ee13ed5201aaaac6f77f55290f189f0a
+# https://gist.githubusercontent.com/Elliria/ee13ed5201aaaac6f77f55290f189f0a/raw/b04882937ac7b5404e6ed378b135454b4e3b680f/GitHubIssueTemplateCheatSheet.yaml
+# https://learntheweb.courses/topics/markdown-yaml-cheat-sheet/
+# https://github.com/orgs/community/discussions/45084

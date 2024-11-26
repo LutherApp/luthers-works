@@ -1,0 +1,83 @@
+name: "🐛 Issue Report"
+description: Report a bug, issue and all kind of errors in this issue-form.
+title: "🐛 - "
+labels: [issue-report]
+assignees:
+  - LutherApp
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for using this repo and opened a issue report!
+  - type: checkboxes
+    id: checked
+    attributes:
+      label: ❗ Have you search in issues for answer?
+      description: There maybe other that already have made an issue about the case.
+      options:
+        - label: I have search open/closed issues and haven't found the answer there.
+  - type: input
+    id: url-address
+    attributes:
+      label: URL Address
+      description: What is the url-address to the page where you experience a issue?
+      placeholder: ex. https://github.com/LutherApp/luthers-works/introduction/foreword, and ...
+    validations:
+      required: false
+  - type: textarea
+    id: describe-the-issue
+    attributes:
+      label: Describe the issue
+      description: A clear and concise description of what the issue is, and how to reproduce is.
+      placeholder: |
+        1. The issue is ...
+        2. To reproduce the issue ...
+        - Go to...
+        - Click on...
+        - Scroll down to...
+        - See error when...
+    validations:
+      required: true
+  - type: textarea
+    id: expected-result
+    attributes:
+      label: Expected result
+      description: A clear and concise description of what you expect(ed) or want to experience.
+      placeholder: |
+        1. I expected...
+        - ...
+    validations:
+      required: false
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots to help explain the problem.
+      placeholder: Take screenshots of the bug and show or tell us what you see!
+    validations:
+      required: false
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 🖋️ Additional context
+      description: Add any other context about the bug here.
+      placeholder: ex. Another thing about the bug ... 
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: The [GitHub Community Guidelines](https://docs.github.com/articles/github-community-guidelines) also applies here.
+      options:
+        - label: I agree to follow this project's [Code of Conduct](https://github.com/LutherApp/luthers-works/CODE_OF_CONDUCT.md). 
+
+# SOURCE
+#
+# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms
+# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository
+# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema#keys
+# https://gist.github.com/Elliria/ee13ed5201aaaac6f77f55290f189f0a
+# https://gist.githubusercontent.com/Elliria/ee13ed5201aaaac6f77f55290f189f0a/raw/b04882937ac7b5404e6ed378b135454b4e3b680f/GitHubIssueTemplateCheatSheet.yaml
+# https://learntheweb.courses/topics/markdown-yaml-cheat-sheet/
+# https://github.com/orgs/community/discussions/45084
