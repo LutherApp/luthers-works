@@ -3,7 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "expand": "./expand.sh",
     "build": "nuxt build",
+    "buildOnVercel": "expand && nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
