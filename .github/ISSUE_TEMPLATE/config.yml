@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: "\U0001F5E3 Discussions"
+    url: https://github.com/LutherApp/luthers-works/discussions
+    about: "Contact us through the `discussion board` for any questions or anything else."
+  - name: "❓ Questions about Nuxt UI"
+    url: https://github.com/nuxt/ui/issues/new/choose
+    about: "Question (or issue) about the Nuxt UI template can be laid out on [Nuxt/UI/Issues](https://github.com/nuxt/ui/issues/new/choose)"
