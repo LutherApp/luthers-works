@@ -4,6 +4,12 @@ import { withoutTrailingSlash } from 'ufo'
 import type { NavItem } from '@nuxt/content'
 
 // in the default layout, but I guess it should be somewhere else
+
+if (import.meta.client && window) {
+  window.history.scrollRestoration = 'manuel'
+} // Source: https://github.com/nuxt/nuxt/issues/3471#issuecomment-406158483
+
+/*
 onMounted(() => {
   // prevents window to scrollTop then returns to savedPosition
   window.history.scrollRestoration = 'auto'
@@ -19,6 +25,7 @@ onMounted(() => {
     window.history.scrollRestoration = 'auto'
   })
 }) // Source: https://github.com/nuxt/nuxt/issues/22487#issuecomment-1830847329
+*/
 
 const navigation = inject<Ref<NavItem[]>>('navigation')
 
