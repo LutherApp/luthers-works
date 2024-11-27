@@ -1,8 +1,13 @@
 <script setup lang="ts">
 import { withoutTrailingSlash } from 'ufo'
+// The following two lines from layouts
+import type { NavItem } from '@nuxt/content'
+
+const navigation = inject<Ref<NavItem[]>>('navigation')
 
 definePageMeta({
-  layout: 'docs'
+  layout: false
+  // layout: 'docs'
 })
 
 const route = useRoute()
@@ -39,53 +44,69 @@ const links = computed(() => [toc?.bottom?.edit && {
 </script>
 
 <template>
-  <UPage>
-    <UPageHeader
-      :title="page.title"
-      :description="page.description"
-      :links="page.links"
-      :headline="headline"
-    />
+  <UContainer>
+    <UPage>
+      <template #left>
+        <UAside>
+          <UNavigationTree
+            :links="mapContentNavigation(navigation)"
+            :multiple="false"
+            default-open
+          />
+        </UAside>
+      </template>
+      <!-- Above tags from Layout -->
 
-    <UPageBody prose>
-      <ContentRenderer
-        v-if="page.body"
-        :value="page"
-      />
+      <UPage>
+        <UPageHeader
+          :title="page.title"
+          :description="page.description"
+          :links="page.links"
+          :headline="headline"
+        />
 
-      <hr v-if="surround?.length">
+        <UPageBody prose>
+          <ContentRenderer
+            v-if="page.body"
+            :value="page"
+          />
 
-      <UContentSurround :surround="surround" />
-    </UPageBody>
+          <hr v-if="surround?.length">
 
-    <template
-      v-if="page.toc !== false"
-      #right
-    >
-      <UContentToc
-        :title="toc?.title"
-        :links="page.body?.toc?.links"
-      >
+          <UContentSurround :surround="surround" />
+        </UPageBody>
+
         <template
-          v-if="toc?.bottom"
-          #bottom
+          v-if="page.toc !== false"
+          #right
         >
-          <div
-            class="hidden lg:block space-y-6"
-            :class="{ '!mt-6': page.body?.toc?.links?.length }"
+          <UContentToc
+            :title="toc?.title"
+            :links="page.body?.toc?.links"
           >
-            <UDivider
-              v-if="page.body?.toc?.links?.length"
-              type="dashed"
-            />
+            <template
+              v-if="toc?.bottom"
+              #bottom
+            >
+              <div
+                class="hidden lg:block space-y-6"
+                :class="{ '!mt-6': page.body?.toc?.links?.length }"
+              >
+                <UDivider
+                  v-if="page.body?.toc?.links?.length"
+                  type="dashed"
+                />
 
-            <UPageLinks
-              :title="toc.bottom.title"
-              :links="links"
-            />
-          </div>
+                <UPageLinks
+                  :title="toc.bottom.title"
+                  :links="links"
+                />
+              </div>
+            </template>
+          </UContentToc>
         </template>
-      </UContentToc>
-    </template>
-  </UPage>
+      </UPage>
+    <!-- The following two tags from Layout -->
+    </UPage>
+  </UContainer>
 </template>
