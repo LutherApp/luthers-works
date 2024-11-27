@@ -13,7 +13,7 @@ hero:
     - label: Content
       icon: i-heroicons-arrow-right-20-solid
       trailing: true
-      to: /st.lb
+      to: /overview
       size: lg
     - label: Sources
       icon: i-simple-icons-github

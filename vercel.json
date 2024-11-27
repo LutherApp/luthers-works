@@ -1,6 +1,6 @@
 {
   "functions": {
-    "st.lb/**/*": {
+    "**/*.*": {
       "memory": 3009,
       "maxDuration": 60
     }
