@@ -60,6 +60,10 @@ export default defineNuxtConfig({
       }
     }
   },
+  // Source: https://github.com/nuxt/ui/issues/2124
+  // https://github.com/nuxt/icon?tab=readme-ov-file#server-bundle
+  icon: {
+    serverBundle: 'remote'
+  },
   uiPro: { routerOptions: true } // false enable app/router.options.ts
-  
 })
