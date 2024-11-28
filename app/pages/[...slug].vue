@@ -3,30 +3,6 @@ import { withoutTrailingSlash } from 'ufo'
 // The following two lines from layouts
 import type { NavItem } from '@nuxt/content'
 
-// in the default layout, but I guess it should be somewhere else
-
-if (import.meta.client && window) {
-  window.history.scrollRestoration = 'manuel'
-} // Source: https://github.com/nuxt/nuxt/issues/3471#issuecomment-406158483
-
-/*
-onMounted(() => {
-  // prevents window to scrollTop then returns to savedPosition
-  window.history.scrollRestoration = 'auto'
-
-  // but restore manual scrollRestoration at the first navigation
-  const unwatch = useRouter().beforeEach(() => {
-    window.history.scrollRestoration = 'manual'
-    unwatch()
-  })
-
-  // and restore auto scrollRestoration when leaving the page
-  window.addEventListener('unload', () => {
-    window.history.scrollRestoration = 'auto'
-  })
-}) // Source: https://github.com/nuxt/nuxt/issues/22487#issuecomment-1830847329
-*/
-
 const navigation = inject<Ref<NavItem[]>>('navigation')
 
 definePageMeta({
@@ -134,3 +110,4 @@ const links = computed(() => [toc?.bottom?.edit && {
     </UPage>
   </UContainer>
 </template>
+

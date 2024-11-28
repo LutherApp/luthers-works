@@ -1,10 +1,10 @@
 {
   "name": "luthers-works",
-  "private": true,
+  "private": false,
   "type": "module",
   "scripts": {
     "expand": "./expand.sh",
-    "build": "nuxt build",
+    "build": "npx nuxi generate",
     "buildOnVercel": "expand && nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
