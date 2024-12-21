@@ -19,6 +19,16 @@ export default defineNuxtConfig({
   colorMode: {
     disableTransition: true
   },
+  // false enable app/router.options.ts
+  content: {
+    markdown: {
+      toc: {
+        depth: 5,
+        searchDepth: 5
+      },
+      anchorLinks: true
+    }
+  },
 
   routeRules: {
     '/api/search.json': { prerender: true }
@@ -35,7 +45,8 @@ export default defineNuxtConfig({
       routes: [
         '/'
       ],
-      crawlLinks: true
+      crawlLinks: true,
+      concurrency: 12
     }
   },
 
@@ -65,5 +76,4 @@ export default defineNuxtConfig({
   icon: {
     serverBundle: 'remote'
   },
-  uiPro: { routerOptions: true } // false enable app/router.options.ts
-})
+  uiPro: { routerOptions: true }})
